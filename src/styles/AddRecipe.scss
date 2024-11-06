@@ -1,0 +1,58 @@
+$primary-color: #4CAF50;
+$secondary-color: #f9f9f9;
+$text-color: #333;
+$border-radius: 4px;
+
+.add-recipe-form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: $secondary-color;
+  border-radius: $border-radius;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  h4 {
+    color: $primary-color;
+    margin-bottom: 10px;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: $border-radius;
+
+    &:focus {
+      border-color: $primary-color;
+      outline: none;
+    }
+  }
+
+  button {
+    background-color: $primary-color;
+    color: #fff;
+    border: none;
+    border-radius: $border-radius;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+
+    &.add-ingredient {
+      background-color: #f0f0f0;
+      color: $text-color;
+
+      &:hover {
+        background-color: #e0e0e0;
+      }
+    }
+  }
+}

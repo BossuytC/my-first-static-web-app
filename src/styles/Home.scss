@@ -1,0 +1,89 @@
+$primary-color: #4CAF50;
+$secondary-color: #f9f9f9;
+$text-color: #333;
+$border-radius: 4px; // Added border-radius variable
+$hover-color: darken($primary-color, 10%); // Added hover-color variable
+
+.home-container {
+  padding: 20px;
+  background-color: $secondary-color;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: $primary-color;
+}
+
+h3 {
+  margin: 10px 0;
+  color: $text-color;
+}
+
+h4 {
+  margin: 10px 0;
+  color: $primary-color;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+
+  li {
+    margin-bottom: 5px;
+    background: #fff;
+    padding: 10px;
+    border-radius: $border-radius; // Use the border-radius variable
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+}
+
+// Styling for links
+.link {
+  text-decoration: none;
+  color: $primary-color;
+  font-weight: bold;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Recipe list styles
+.recipeList {
+  padding: 0;
+
+  .recipeItem {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: $border-radius; // Use the border-radius variable
+    background-color: white;
+
+    h3 {
+      margin: 0;
+    }
+  }
+}
+
+// Button styles
+.button {
+  background-color: $primary-color;
+  color: $text-color;
+  border: none;
+  border-radius: $border-radius; // Use the border-radius variable
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $hover-color; 
+  }
+
+  &.add-recipe {
+    margin-top: 20px;
+    display: inline-block;
+  }
+}

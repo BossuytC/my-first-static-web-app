@@ -1,0 +1,19 @@
+$primary-color: #ff6347;
+$secondary-color: #333;
+
+.app {
+  background-color: $primary-color;
+  color: $secondary-color;
+
+  .recipe-card {
+    background: lighten($primary-color, 30%);
+    border: 1px solid darken($primary-color, 20%);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+  }
+}
+
+form div {
+  margin-bottom: 1rem;
+}
