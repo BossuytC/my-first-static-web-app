@@ -11,6 +11,8 @@ const App: React.FC = () => {
     setRecipes((prevRecipes) => [...prevRecipes, recipe]);
   };
 
+  const BACKGROUND_COLOR = process.env.REACT_APP_BACKGROUND_COLOR || '#ffffff';
+
   return (
     <Routes>
       <Route path="/" element={<Home recipes={recipes} />} />

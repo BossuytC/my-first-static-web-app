@@ -19,6 +19,14 @@ jobs:
         with:
           submodules: true
           lfs: false
+      - name: Create Env File
+        run: echo "window.ENV = { BACKGROUND_COLOR: '$BACKGROUND_COLOR_STAGE' };" > public/env.js
+        env:
+          BACKGROUND_COLOR_STAGE: ${{ secrets.BACKGROUND_COLOR_STAGE }} 
+      - name: Set Environment Variables
+        run: echo "BACKROUND_COLOR=$BACKGROUND_COLOR_STAGE" >> $GITHUB_ENV
+        env: 
+          BACKGROUND_COLOR_STAGE: ${{ secrets.BACKGROUND_COLOR_STAGE }}
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
