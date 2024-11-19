@@ -10,7 +10,7 @@ const App: React.FC = () => {
   //environment variable 
   const BACKGROUND_COLOR = process.env.REACT_APP_BACKGROUND_COLOR || '#ffffff';
 
-  console.log('Background color:', BACKGROUND_COLOR); /
+  console.log('Background color:', BACKGROUND_COLOR);
 
   const addRecipe = (recipe: Recipe) => {
     setRecipes((prevRecipes) => [...prevRecipes, recipe]);
